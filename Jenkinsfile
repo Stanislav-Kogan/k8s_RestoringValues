@@ -21,7 +21,7 @@ pipeline {
     stage('Fetch artifacts from L2') {
       steps {
         sh 'rm -rf deploy_art && mkdir -p deploy_art'
-        copyArtifacts(projectName: 'KoganSK/KoganSK_pipeline', selector: lastSuccessful())
+        copyArtifacts(projectName: 'KoganSK/KoganSK_lab2', selector: lastSuccessful())
         // если артефакты лежат в dist/ и корне — подстрой под твою L2
         sh '''#!/usr/bin/env bash
           set -e
@@ -97,3 +97,4 @@ pipeline {
     }
   }
 }
+
