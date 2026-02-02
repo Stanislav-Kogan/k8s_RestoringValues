@@ -4,7 +4,7 @@ pipeline {
   environment {
     PYTHONNOUSERSITE = "1"
     NAMESPACE        = "koganlab7"
-    REGISTRY_ID      = "crpist2uge71cahfb48e"
+    REGISTRY_ID      = "cl12a9jc7s3ffmjmq6qj-ysew"
     IMAGE            = "cr.yandex/${REGISTRY_ID}/restoringvalues:latest"
   }
 
@@ -61,7 +61,7 @@ pipeline {
           echo "$TOKEN" | docker login --username iam --password-stdin cr.yandex
 
           echo "==> Push image"
-          docker push cr.yandex/crpist2uge71cahfb48e/restoringvalues:latest
+          docker push cr.yandex/cl12a9jc7s3ffmjmq6qj-ysew/restoringvalues:latest
         '''
       }
     }
@@ -97,5 +97,6 @@ pipeline {
     }
   }
 }
+
 
 
