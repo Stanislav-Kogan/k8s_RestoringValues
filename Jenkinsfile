@@ -39,7 +39,7 @@ pipeline {
       steps {
         sh '''#!/usr/bin/env bash
           set -e
-          docker build -t "$IMAGE" -f Docker/Dockerfile .
+          docker build --no-cache -t "$IMAGE" -f Docker/Dockerfile .
         '''
       }
     }
@@ -97,4 +97,5 @@ pipeline {
     }
   }
 }
+
 
